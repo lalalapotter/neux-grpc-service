@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ai.clustar.grpc.exchange";
+option java_outer_classname = "ExchangeProto";
+option objc_class_prefix = "EXS";
+
+package exchange;
+
+service StreamingHeartBeat {
+  rpc ExchangeHearBeatStreaming (stream ExchangeRequest) returns (stream ExchangeReply) {}
+}
+
+message ExchangeRequest {
+  string name = 1;
+}
+
+message ExchangeReply {
+  string message = 1;
+}

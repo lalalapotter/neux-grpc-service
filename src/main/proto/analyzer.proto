@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ai.clustar.grpc.analyzer";
+option java_outer_classname = "AnalyzerProto";
+option objc_class_prefix = "ALZ";
+
+package analyzer;
+
+service Analyzer {
+  rpc HeatBeat (AnalyzerRequest) returns (AnalyzerReply) {}
+}
+
+message AnalyzerRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message AnalyzerReply {
+  string message = 1;
+}
