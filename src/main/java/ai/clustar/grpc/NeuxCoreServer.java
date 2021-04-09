@@ -15,7 +15,7 @@ public class NeuxCoreServer {
     static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
     static final String DB_URL = "jdbc:mysql://localhost:3306/neux";
     static final String USER = "root";
-    static final String PASS = "Zcg961014";
+    static final String PASS = "password";
     private Server server;
 
     private void start() throws IOException {
